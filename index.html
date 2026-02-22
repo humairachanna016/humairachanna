@@ -6,6 +6,97 @@
 <title>Neon Portfolio</title>
 
 <style>
+    /* ============================= */
+/* ===== RESPONSIVE DESIGN ===== */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 992px){
+
+    nav{
+        gap:20px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .card{
+        width:220px;
+    }
+
+    .profile{
+        width:230px;
+        height:230px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+    header{
+        padding:15px 0;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    section{
+        padding-top:140px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width:90%;
+        max-width:350px;
+    }
+
+    .profile{
+        width:180px;
+        height:180px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px){
+
+    h1{
+        font-size:26px;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .profile{
+        width:150px;
+        height:150px;
+    }
+}
 /* ===== GLOBAL ===== */
 *{
     margin:0;
@@ -121,10 +212,12 @@ footer{
     background:#000;
     box-shadow:0 0 20px #0ff;
 }
-.social{
+.socials{
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .socials a{
     height: 45px;
@@ -145,15 +238,14 @@ footer{
 .profile{
     width: 280px;
     height: 280px;
+    border-radius: 2.7em;
+    transition: 0.4s;
+    object-fit: cover;
 }
+
 .profile:hover{
     transform: scale(1.08);
     box-shadow: 0 0 60px white;
-}
-.profile img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 </style>
 </head>
@@ -171,7 +263,7 @@ footer{
 </header>
 
 <section id="home">
-    <img src="IMG-20260221-WA0018.jpg" alt="" height="250%" width="200px" class="profile" style="border-radius: 2.7em;">
+    <img src="c:\Users\HP I7 8TH\Desktop\IMG-20260221-WA0018.jpg" alt="My Profile" class="profile">
     <br>
     <br>
     <br>
@@ -181,8 +273,8 @@ footer{
     <h1>Welcome to My Portfolio</h1>
     <p>I create modern, responsive and glowing web experiences using HTML, CSS and JavaScript.</p>
     <div class="socials">
-        <a href="https://www.linkedin.com/in/humaira-channa" target="_blank">in</a>
-        <hr><hr>
+        <a href="https://www.linkedin.com/in/humaira-channa-827a6b3a8?utm - source=share&utm-campaign=share-via&utm-content=profile&utm-medium=ios-app" target="_blank">in</a>
+        
         <a href="https://www.fiverr.com/channa_humaira/buying?source=avatar_menu_profile" target="_blank">fi</a>
         
     </div>
@@ -190,11 +282,16 @@ footer{
 
 <section id="about">
     <h1>About Me</h1>
-    <p>I am passionate Web Developer with a strong Interest in creating clean, responsive, and user-friendly websites. I have hands-on experience wuth HTML, CSS, and basic JavaScript, and I am continuously learing modern Web technologies to improve my skills.I enjoy turning ideas into functional digital experiences and am eager to grow in the tech industry, Ans I help clients achieve their goals through wonderfuldesgins and websites. Let's connect and create something amazing!</p>
+    <p>
+I am a passionate Web Developer with a strong interest in creating clean, responsive, and user-friendly websites. 
+I have hands-on experience with HTML, CSS, and basic JavaScript, and I am continuously learning modern web technologies to improve my skills. 
+I enjoy turning ideas into functional digital experiences and helping clients achieve their goals through modern, effective designs. 
+Let’s connect and create something amazing!
+</p>
 </section>
 
 <section id="services">
-    <h1>Our Services</h1>
+    <h1>My Services</h1>
     <div class="card-container">
         <div class="card">
             <h3>Web Design</h3>
@@ -224,7 +321,7 @@ footer{
             <p>High-converting business landing page.</p>
         </div>
         <div class="card">
-            <h3>Bouquet Wbsite</h3>
+            <h3>Bouquet Website</h3>
             <p>Modern and attractive with clean code.</p>
         </div>
     </div>
@@ -237,7 +334,7 @@ footer{
 </section>
 
 <footer>
-    © 2026 Neon Portfolio | All Rights Reserved
+    © 2026 Humairachanna
 </footer>
 
 <script>
@@ -265,5 +362,4 @@ window.addEventListener("scroll", () => {
 </script>
 
 </body>
-
 </html>

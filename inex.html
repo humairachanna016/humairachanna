@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Portfolio</title>
+
+<style>
+    /* ============================= */
+/* ===== RESPONSIVE DESIGN ===== */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 992px){
+
+    nav{
+        gap:20px;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .card{
+        width:220px;
+    }
+
+    .profile{
+        width:230px;
+        height:230px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+
+    header{
+        padding:15px 0;
+    }
+
+    nav{
+        flex-wrap: wrap;
+        gap:15px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    section{
+        padding-top:140px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width:90%;
+        max-width:350px;
+    }
+
+    .profile{
+        width:180px;
+        height:180px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px){
+
+    h1{
+        font-size:26px;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .profile{
+        width:150px;
+        height:150px;
+    }
+}
+/* ===== GLOBAL ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#0a0a0a;
+    color:white;
+}
+
+/* ===== NAVBAR ===== */
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#000;
+    padding:20px 0;
+    z-index:1000;
+    box-shadow:0 0 20px #0ff;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a:hover,
+nav a.active{
+    color:#0ff;
+    text-shadow:0 0 10px #0ff,
+                0 0 20px #0ff,
+                0 0 40px #0ff;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding-top:120px;
+    text-align:center;
+}
+
+h1{
+    font-size:50px;
+    margin-bottom:20px;
+    color:#0ff;
+    text-shadow:0 0 10px #0ff,
+                0 0 20px #0ff,
+                0 0 40px #0ff;
+}
+
+p{
+    max-width:600px;
+    line-height:1.6;
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* ===== SERVICES & PROJECT CARDS ===== */
+.card-container{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.card{
+    width:250px;
+    padding:20px;
+    border:2px solid #0ff;
+    border-radius:15px;
+    transition:0.4s;
+    box-shadow:0 0 15px #0ff;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #0ff,
+               0 0 50px #0ff;
+}
+
+/* ===== CONTACT ===== */
+.email{
+    font-size:22px;
+    margin-top:20px;
+    color:#0ff;
+    text-shadow:0 0 10px #0ff,
+                0 0 20px #0ff;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    box-shadow:0 0 20px #0ff;
+}
+.socials{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.socials a{
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.socials a:hover{
+    background-color: aliceblue;
+    color: #000;
+    box-shadow: 0 0 20px white;
+}
+.profile{
+    width: 280px;
+    height: 280px;
+    border-radius: 2.7em;
+    transition: 0.4s;
+    object-fit: cover;
+}
+
+.profile:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 60px white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <img src="c:\Users\HP I7 8TH\Desktop\IMG-20260221-WA0018.jpg" alt="My Profile" class="profile">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Welcome to My Portfolio</h1>
+    <p>I create modern, responsive and glowing web experiences using HTML, CSS and JavaScript.</p>
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/humaira-channa-827a6b3a8?utm - source=share&utm-campaign=share-via&utm-content=profile&utm-medium=ios-app" target="_blank">in</a>
+        
+        <a href="https://www.fiverr.com/channa_humaira/buying?source=avatar_menu_profile" target="_blank">fi</a>
+        
+    </div>
+</section>
+
+<section id="about">
+    <h1>About Me</h1>
+    <p>
+I am a passionate Web Developer with a strong interest in creating clean, responsive, and user-friendly websites. 
+I have hands-on experience with HTML, CSS, and basic JavaScript, and I am continuously learning modern web technologies to improve my skills. 
+I enjoy turning ideas into functional digital experiences and helping clients achieve their goals through modern, effective designs. 
+Let’s connect and create something amazing!
+</p>
+</section>
+
+<section id="services">
+    <h1>My Services</h1>
+    <div class="card-container">
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Modern and attractive UI designs.</p>
+        </div>
+        <div class="card">
+            <h3>Frontend Dev</h3>
+            <p>Responsive websites with clean code.</p>
+        </div>
+        <div class="card">
+            <h3>Shop Website</h3>
+            <p>Responsive websites with clean code.</p>
+        </div>
+        
+    </div>
+</section>
+
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="card-container">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal responsive portfolio site.</p>
+        </div>
+        <div class="card">
+            <h3>Landing Page</h3>
+            <p>High-converting business landing page.</p>
+        </div>
+        <div class="card">
+            <h3>Bouquet Website</h3>
+            <p>Modern and attractive with clean code.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h1>Contact Me</h1>
+    <p>Feel free to reach out via email:</p>
+    <div class="email">humairagullchanna@gmail.com</div>
+</section>
+
+<footer>
+    © 2026 Humairachanna
+</footer>
+
+<script>
+// ===== ACTIVE NAV LINK ON SCROLL =====
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(a => {
+        a.classList.remove("active");
+        if (a.getAttribute("href") === "#" + current) {
+            a.classList.add("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
